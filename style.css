@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --font-title: "Big Shoulders Display", sans-serif;
+  --font-p: "Lexend Deca", sans-serif;
+  --color-bg-hd-btn: hsl(0, 0%, 95%);
+  --color-p: hsla(0, 0%, 100%, 0.75);
+  --color-first-clmn: hsl(31, 77%, 52%);
+  --color-scnd-clmn: hsl(184, 100%, 22%);
+  --color-third-clmn: hsl(179, 100%, 13%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-style: none;
+    text-decoration: none;
+}
+
+body, button{
+    background:var(--color-bg-hd-btn);
+}
+
+h1{
+    color: var(--color-bg-hd-btn);
+    font-family: var(--font-title);
+}
+
+p{
+    color: var(--color-p);
+    font-size: 0.9rem;
+    font-family: var(--font-p);
+}
+
+main{
+    display: flex;
+    margin: 5rem 10rem;
+    
+}
+
+.main_content{
+    max-width: 850px;
+    height:450px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    
+}
+
+.main_content-wrapper{
+    padding: 2rem;
+}
+
+.main_content-wrapper img, .main_content-wrapper h1{
+    margin-bottom: 1rem;
+}
+
+.main_content-wrapper p{
+    margin-right: 1.5rem;
+    margin-bottom: 8rem;
+    line-height: 1.5rem;
+}
+
+a{
+    font-family: var(--font-p);
+    background: var(--color-bg-hd-btn);
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+    cursor: pointer;
+}
+
+.sedans{
+    background: var(--color-first-clmn);
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+.sedans a{
+    color: var(--color-first-clmn);
+}
+
+.suvs{
+    background: var(--color-scnd-clmn);
+}
+.suvs a{
+    color: var(--color-scnd-clmn);
+}
+
+.luxury{
+    background: var(--color-third-clmn);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+.luxury a{
+   color: var(--color-third-clmn);
+}
+
+@media screen and (max-width:1100px) {
+
+    main{
+        margin: 2rem;
+    }
+
+    .main_content{
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        height: 100%;
+    }
+
+    .main_content-wrapper{
+        height: 380px;
+    }
+
+    .main_content-wrapper p{
+        margin-right: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    a{
+      margin-bottom: 2.5rem;
+    }
+
+    .sedans{
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .luxury{
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+    
+}
+
